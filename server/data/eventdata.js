@@ -17,6 +17,24 @@ const eventData = [
         "description":"EAT EAT EAT",
         "location_id": 2
     },
+        {
+        "id": 3,
+        "name": "Dua Lipa",
+        "location": "Los Angeles",
+        "pricePoint": "200",
+        "image":"https://media.istockphoto.com/id/1399630042/photo/personal-perspective-shot-of-a-womans-hand-holding-a-bao-bun-with-tofu-at-a-street-market.jpg?s=612x612&w=0&k=20&c=Gf6nwc3z-Sxthx5tlnJqDNeXhSi7J4rghMtcM49UsvQ=",
+        "description":"EAT EAT EAT",
+        "location_id": 3
+    },
+        {
+        "id": 4,
+        "name": "Kendrick Lamar",
+        "location": "New York",
+        "pricePoint": "200",
+        "image":"https://media.istockphoto.com/id/1399630042/photo/personal-perspective-shot-of-a-womans-hand-holding-a-bao-bun-with-tofu-at-a-street-market.jpg?s=612x612&w=0&k=20&c=Gf6nwc3z-Sxthx5tlnJqDNeXhSi7J4rghMtcM49UsvQ=",
+        "description":"EAT EAT EAT",
+        "location_id": 4
+    }
 ]
 
 export default eventData;

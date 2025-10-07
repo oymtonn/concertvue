@@ -1,6 +1,3 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 import { pool } from './database.js';
 import eventData from '../data/eventdata.js';
 import locationData from '../data/locationdata.js';

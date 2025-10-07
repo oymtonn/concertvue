@@ -12,23 +12,23 @@ const App = () => {
       element: <Locations />
     },
     {
-      path: '/echolounge',
+      path: '/WashingtonDC',
       element: <LocationEvents index={1} />
     },
     {
-      path: '/houseofblues',
+      path: '/SanFrancisco',
       element: <LocationEvents index={2} />
     },
     {
-      path: '/pavilion',
+      path: '/LosAngeles',
       element: <LocationEvents index={3} />
     },
     {
-      path: '/americanairlines',
+      path: '/NewYork',
       element: <LocationEvents index={4} />
     },
     {
-      path: '/events',
+      path: '/events/',
       element: <Events />
     }
   ])
