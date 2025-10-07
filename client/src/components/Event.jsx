@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Event.css';
-import { getEventsById } from '../pages/Events';
+import { getEventById } from '../pages/Events';
 
 const Event = (props) => {
 
@@ -23,7 +23,7 @@ const Event = (props) => {
     useEffect(() => {
         (async () => {
             try {
-                const eventData = await getEventsById(props.id)
+                const eventData = await getEventById(props.id)
                 setEvent(eventData)
             }
             catch (error) {

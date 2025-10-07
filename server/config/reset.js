@@ -25,7 +25,6 @@ const createTables = async () => {
         location VARCHAR(255) NOT NULL,
         pricePoint VARCHAR(10) NOT NULL,
         image VARCHAR(255) NOT NULL,
-        description TEXT NOT NULL,
         location_id INTEGER REFERENCES locations(id)
       )
     `);
@@ -46,14 +45,13 @@ const seedLocationsTable = async () => {
 const seedEventsTable = async () => {
   for (const event of eventData) {
     await pool.query(
-      `INSERT INTO events (name, location, pricePoint, image, description, location_id) 
-       VALUES ($1, $2, $3, $4, $5, $6)`,
+      `INSERT INTO events (name, location, pricePoint, image, location_id) 
+       VALUES ($1, $2, $3, $4, $5)`,
       [
         event.name,
         event.location,
         event.pricePoint,
         event.image,
-        event.description,
         event.location_id
       ]
     );
