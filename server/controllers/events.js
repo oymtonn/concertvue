@@ -1,7 +1,11 @@
 import { pool } from '../config/database.js';
 
+// returns events based on their location id, can be multiple events returned
+
 export const getEvents = async (req, res) => {
   try {
+    // look for location_id in query
+    // http://localhost:3001/events?location_id=2 would return all with loc id 2
     const { location_id } = req.query;
     let results;
 
@@ -14,13 +18,14 @@ export const getEvents = async (req, res) => {
       results = await pool.query('SELECT * FROM events ORDER BY id ASC');
     }
 
-    // ✅ send back the result to the client
     res.status(200).json(results.rows);
   } catch (err) {
     console.error('Error fetching events:', err);
     res.status(500).json({ error: err.message });
   }
 };
+
+// returns events on THEIR actual id, not location. so it will return only one event
 
 export const getEventsById = async (req, res) => {
   try {

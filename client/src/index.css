@@ -10,7 +10,7 @@
     background-color: var(--secondary-color);
     font-family: Nunito Sans, Verdana, sans-serif;
     height: 100vh;
-    --main-color: rgb(217, 29, 242);
+    --main-color: rgb(78, 74, 133);
     --secondary-color: rgb(3, 1, 64);
     --primary: var(--main-color);
     --primary-hover: rgb(111, 28, 166);
