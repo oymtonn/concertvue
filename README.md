@@ -32,7 +32,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 
-<img src='concertvue.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='concertvue2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 <!-- Recommended tools:
