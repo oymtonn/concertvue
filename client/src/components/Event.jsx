@@ -6,17 +6,20 @@ const Event = (props) => {
 
     const [event, setEvent] = useState([])
     const [time, setTime] = useState([])
-    const [remaining, setRemaining] = useState([])
 
     const formatTime = (timeString) => {
         const date = new Date(timeString);
         return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     };
 
-    const formatRemainingTime = (futureDate) => {
-        const diff = new Date(futureDate) - new Date();
-        const mins = Math.floor(diff / 60000);
-        return mins > 0 ? `${mins} minutes left` : 'Expired';
+    const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString([], { 
+        weekday: 'short',   // e.g., "Mon"
+        month: 'short',     // e.g., "Oct"
+        day: 'numeric',     // e.g., "7"
+        year: 'numeric'     // e.g., "2025"
+        });
     };
 
 
@@ -44,18 +47,6 @@ const Event = (props) => {
         }) ()
     }, [event])
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = formatRemainingTime(event.remaining)
-                setRemaining(timeRemaining)
-                formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
 
     return (
         <article className='event-information'>
@@ -64,7 +55,7 @@ const Event = (props) => {
             <div className='event-information-overlay'>
                 <div className='text'>
                     <h3>{event.name}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
+                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {formatDate(event.time)} <br /> {time}</p>
                     <p id={`remaining-${event.id}`}>${event.pricepoint}</p>
                 </div>
             </div>
